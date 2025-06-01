@@ -83,23 +83,27 @@ import {
       getLikes();
     }, []);
   
-    return (
-      <div>
-        <div className="title">
-          <h1> {post.title}</h1>
-        </div>
-        <div className="body">
-          <p> {post.description} </p>
-        </div>
-  
-        <div className="footer">
-          <p> @{post.username} </p>
-          <button onClick={hasUserLiked ? removeLike : addLike}>
-            {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}{" "}
-          </button>
-          {likes && <p> Likes: {likes?.length} </p>}
-        </div>
-      </div>
-    );
+   return (
+  <div className="post">
+    <div className="post-header">
+      <div className="post-title">
+      <h1>{post.title}</h1>
+       </div>
+      <div className="post-body">
+      <p>{post.description}</p>
+    </div>  
+    </div>
+    
+<div className="post-footer">
+  <div className="like-group">
+    <button className="like-button" onClick={hasUserLiked ? removeLike : addLike}>
+      {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
+    </button>
+    {likes && <span className="like-count">Likes: {likes.length}</span>}
+  </div>
+  <span className="post-username">@{post.username}</span>
+</div>
+  </div>
+);
   };
   
