@@ -29,6 +29,6 @@ A simple and responsive React app that allows users to log in using **Google Aut
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/lillian0624/Firebase-Social-Media-Project-.git
    cd your-repo
    ```
