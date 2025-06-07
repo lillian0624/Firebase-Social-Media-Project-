@@ -5,12 +5,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Post } from "./post";
 import "./post.css";
 
+
 export interface Post {
     id: string;
     userId: string;
     title: string;
     username: string;
     description: string;
+    imageUrl?: string;
 }
 
 export const Main = () => {
@@ -49,6 +51,7 @@ export const Main = () => {
 
     return (
         <div>
+             
             {postList?.map((post) => (
                 <Post key={post.id} post={post} />
             ))}

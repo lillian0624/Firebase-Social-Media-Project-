@@ -21,7 +21,13 @@ export const Navbar =()=>{
             {user && (
                 <>
             <p>{user?.displayName}</p>
-            <img src={user?.photoURL || ""} width="20" height="20"/>
+            <img
+  src={user?.photoURL || ""}
+  width="32"
+  height="32"
+  style={{ borderRadius: "50%", objectFit: "cover", marginLeft: 8 }}
+  alt={user?.displayName || "Profile"}
+/>
             <button onClick={signUserOut}>Log Out</button>
             </>
             )}

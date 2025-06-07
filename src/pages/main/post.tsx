@@ -91,6 +91,9 @@ import {
        </div>
       <div className="post-body">
       <p>{post.description}</p>
+       {post.imageUrl && (
+          <img src={post.imageUrl} alt="Post" style={{ maxWidth: "100%", marginTop: "1rem" }} />
+        )}
     </div>  
     </div>
     
